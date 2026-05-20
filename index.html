@@ -1,189 +1,241 @@
 <!doctype html>
 <html lang="id">
  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="Etnl3vAoLJQth-a7PQ2oaGOXqAqYzqkYCeMqOmb7Cbo">
   <meta name="keywords" content="Buku Agen, Buku Warung, Promo EDC, Layanan Bantuan, Daftar Akun, Cara Jadi Agen, Harga EDC, Buku Agen Call Center, Bantuan Aplikasi Buku Agen, Login Buku Agen, Saldo Agen, Hubungi CS">
   <meta name="description" content="Pusat Bantuan Aplikasi Buku Agen &amp; Buku Warung Resmi. Jual EDC SmartPeak P1000 &amp; Mini ATM HausJo Harga Murah. Bisa Dapat Cashback Sampai 250 Ribu">
   <meta property="og:title" content="Layanan Bantuan Buku Agen">
+  <title>Buku Agen - Pusat Layanan Pelanggan</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+        background-color: #f1f5f9;
+        color: #1e293b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 12px;
+    }
+
+    /* Container kompak agar hemat ruang */
+    .main-wrapper {
+        background-color: #ffffff;
+        max-width: 420px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 16px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+    }
+
+    .header-image {
+        width: 100%;
+        border-radius: 16px;
+        margin-bottom: 14px;
+        display: block;
+    }
+
+    /* Header Informasi */
+    .content-header {
+        text-align: left;
+        padding: 0 4px;
+        margin-bottom: 12px;
+    }
+
+    .brand-title {
+        font-size: 19px;
+        font-weight: 800;
+        color: #0a2540;
+        letter-spacing: -0.4px;
+        line-height: 1.3;
+    }
+
+    /* Desain Tombol Menu */
+    .action-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        background-color: #f8faff;
+        color: #0a2540;
+        padding: 12px 14px;
+        margin-bottom: 8px;
+        text-decoration: none;
+        border-radius: 14px;
+        text-align: left;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #e9effd;
+    }
+
+    .action-item:hover {
+        background-color: #ffffff;
+        border-color: #0052cc;
+        box-shadow: 0 4px 12px rgba(0, 82, 204, 0.06);
+        transform: translateY(-1px);
+    }
+
+    /* Tombol Utama / CS WhatsApp */
+    .action-item-primary {
+        background: linear-gradient(135deg, #0052cc 0%, #0043a8 100%);
+        color: #ffffff;
+        border: none;
+        box-shadow: 0 4px 10px rgba(0, 82, 204, 0.15);
+    }
+
+    .action-item-primary:hover {
+        background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+        box-shadow: 0 6px 16px rgba(0, 82, 204, 0.25);
+        transform: translateY(-1px);
+    }
+
+    .item-content {
+        flex: 1;
+    }
+
+    /* Wrapper khusus teks dan centang verified */
+    .heading-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .item-heading {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    .item-sub {
+        font-size: 11px;
+        color: #627d98;
+        display: block;
+        line-height: 1.3;
+    }
+
+    .action-item-primary .item-sub {
+        color: #dbeafe;
+    }
+
+    /* Desain Ikon Bulat */
+    .icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 1px solid #e2e8f0;
+        flex-shrink: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    .action-item-primary .icon-wrapper {
+        background-color: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: none;
+    }
+
+    .icon-wrapper svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    /* Banner Informasi */
+    .reward-banner {
+        background-color: #f0f5ff;
+        border-radius: 14px;
+        padding: 12px 14px;
+        margin-top: 12px;
+        text-align: left;
+        border: 1px solid #cce0ff;
+    }
+
+    .reward-heading {
+        font-size: 12px;
+        color: #0052cc;
+        font-weight: 700;
+        text-transform: none; /* Mengubah agar tidak otomatis huruf besar semua */
+        letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
+
+    .reward-text {
+        font-size: 12px;
+        color: #334155;
+        line-height: 1.4;
+    }
+
+    .reward-text strong {
+        color: #0052cc;
+    }
+  </style> 
  </head>
  <body>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buku Agen Pembelian
-    EDC Pusat Bantuan Layanan CS.WA 081234567890</title>
-  <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
 
-        body {
-            background-color: #e0e9f5;
-            padding: 10px;
-            text-align: center;
-        }
+  <div class="main-wrapper">
+    <img src="https://images2.imgbox.com/87/e3/7QbQZmt2_o.jpg" alt="Buku Agen Informasi" class="header-image">
+    
+    <div class="content-header">
+        <h1 class="brand-title">Pusat Bantuan Resmi Buku Agen</h1>
+    </div>
 
-        .gambar-promo {
-            width: 90%;
-            max-width: 480px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
+    <a href="form.html" class="action-item" target="_blank">
+        <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#0052cc">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+            </svg>
+        </div>
+        <div class="item-content">
+            <span class="item-heading">Kendala EDC Buku Agen</span>
+            <span class="item-sub">Kendala edc, kendala saldo, dan manajemen akun</span>
+        </div>
+    </a>
 
-        h1 {
-            color: #00337a;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
+    <a href="form.html" class="action-item" target="_blank">
+        <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#0052cc">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            </svg>
+        </div>
+        <div class="item-content">
+            <span class="item-heading">Kendala Aplikasi Buku Agen</span>
+            <span class="item-sub">Akses formulir pelaporan terpadu untuk respon lebih cepat</span>
+        </div>
+    </a>
 
-        .harga-besar {
-            background-color: #ffdd00;
-            color: #000;
-            font-size: 20px;
-            font-weight: bold;
-            display: inline-block;
-            padding: 3px 15px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
+    <a href="https://wa.me/6282154812370" class="action-item action-item-primary" target="_blank">
+        <div class="icon-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501c1.153-.086 2.294-.213 3.423-.38 1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+            </svg>
+        </div>
+        <div class="item-content">
+            <div class="heading-wrapper">
+                <span class="item-heading">Hubungi CS WhatsApp</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5213 2.62353C11.3147 1.75239 12.6853 1.75239 13.4787 2.62353L14.7354 4.00338C15.0932 4.39626 15.6023 4.60711 16.1345 4.58189L18.0053 4.49326C19.1839 4.43741 20.1704 5.42391 20.1146 6.60252L20.0259 8.47334C20.0007 9.00551 20.2116 9.51465 20.6044 9.87249L21.9843 11.1292C22.8554 11.9226 22.8554 13.2774 21.9843 14.0708L20.6044 15.3275C20.2116 15.6853 20.0007 16.1945 20.0259 16.7267L20.1146 18.5975C20.1704 19.7761 19.1839 20.7626 18.0053 20.7067L16.1345 20.6181C15.6023 20.5929 15.0932 20.8037 14.7354 21.1966L13.4787 22.5765C12.6853 23.4476 11.3147 23.4476 10.5213 22.5765L9.26464 21.1966C8.9068 20.8037 8.39766 20.5929 7.86548 20.6181L5.99468 20.7067C4.81607 20.7626 3.82957 19.7761 3.88542 18.5975L3.97405 16.7267C3.99927 16.1945 3.78841 15.6853 3.39553 15.3275L2.01568 14.0708C1.14454 13.2774 1.14454 11.9226 2.01568 11.1292L3.39553 9.87249C3.78841 9.51465 3.99927 9.00551 3.97405 8.47334L3.88542 6.60252C3.82957 5.42391 4.81607 4.43741 5.99468 4.49326L7.86548 4.58189C8.39766 4.60711 8.9068 4.39626 9.26464 4.00338L10.5213 2.62353Z" fill="#25D366"/>
+                    <path d="M9.5 12L11.5 14L15.5 9" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <span class="item-sub">Melayani setiap hari pukul 07.00 - 21.00 WIB</span>
+        </div>
+    </a>
 
-        .tombol {
-            display: block;
-            width: 90%;
-            max-width: 450px;
-            background-color: #0050b3;
-            color: white;
-            padding: 12px;
-            margin: 10px auto;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 15px;
-            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-            cursor: pointer;
-            border: none;
-        }
-
-        .konten-shopee {
-            background-color: white;
-            border-radius: 8px;
-            padding: 15px;
-            margin-top: 10px;
-            text-align: center;
-            display: none;
-        }
-
-        .gambar-produk {
-            width: 100%;
-            border-radius: 8px;
-            margin-bottom: 10px;
-        }
-
-        .nama-produk {
-            font-size: 16px;
-            color: #00337a;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .harga-produk {
-            font-size: 18px;
-            color: #e63946;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        /* STYLE BOX REKENING WARNA DIUAP BIAR JELAS */
-        .box-rekening {
-            background-color: #dff0d8; /* Warna hijau muda */
-            border: 2px solid #3c763d; /* Border hijau tua */
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-        }
-
-        .judul-rek {
-            color: #2c3e50;
-            font-weight: bold;
-            font-size: 15px;
-            margin-bottom: 8px;
-        }
-
-        .nama-bank {
-            font-size: 14px;
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-
-        .nomor-rek {
-            background-color: #ffffff; /* Latar putih */
-            color: #d9534f; /* Tulisan merah */
-            border: 1px solid #ccc;
-            padding: 8px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-            display: inline-block;
-            margin: 5px 0;
-        }
-
-        .atas-nama {
-            font-size: 14px;
-            margin-top: 5px;
-            font-weight: bold;
-            color: #2c3e50;
-        }
-
-        h2 {
-            color: #00337a;
-            font-size: 17px;
-            margin: 25px 0 15px;
-        }
-
-        .promo-text {
-            font-size: 15px;
-            color: #00337a;
-            margin: 15px 0;
-        }
-
-        .cashback {
-            background-color: #ffdd00;
-            color: #000;
-            font-size: 16px;
-            font-weight: bold;
-            display: inline-block;
-            padding: 3px 12px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-    </style> 
-  <img src="https://images2.imgbox.com/b5/33/LrD3ZhSg_o.jpg" alt="Promo BukuAgen" class="gambar-promo">
-  <h1>Dapatkan EDC BukuAgen Mulai Di Bawa Ini</h1>
-  <div class="harga-besar">400ribuan!</div>
-  <a href="https://kirimwa.id/6282154812370" class="tombol" target="_blank"> <span>🌐</span> Pusat Bantuan Aplikasi Buku Agen </a> <a href="form.html" class="tombol" target="_blank"> <span>📱</span> Layanan Khusus Bantuan Buku Agen &amp; Buku Warung </a>
-
-  <h2>Pelajari EDC BukuAgen &amp; Promo</h2>
-  <a href="" class="tombol" target="_blank"> <span>💬</span> Hubungi CS Wa 
-   <br>(Setiap Hari, 07.00-21.00 WIB) </a>
-  <div class="promo-text">Beli EDC BukuAgen &amp; Selesaikan Misi,</div>
-  <div class="cashback">Dapatkan Cashback s/d 250Ribu</div>
-  <script>
-        function toggleKonten() {
-            var konten = document.getElementById("kontenShopee");
-            if (konten.style.display === "none" || konten.style.display === "") {
-                konten.style.display = "block";
-            } else {
-                konten.style.display = "none";
-            }
-        }
-
-        function copyText(element) {
-            var text = element.innerText;
-            navigator.clipboard.writeText(text).then(function() {
-                alert("Nomor rekening berhasil disalin!");
-            });
-        }
-    </script>
+    <div class="reward-banner">
+        <div class="reward-heading">Butuh bantuan darurat?</div>
+        <div class="reward-text">Silakan klik Hubungi CS untuk terhubung langsung dengan tim Customer Service kami yang siap melayani kendala Anda.</div>
+    </div>
+  </div>
  </body>
 </html>
